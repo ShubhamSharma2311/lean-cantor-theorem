@@ -10,4 +10,8 @@ namespace Cantor
 
 variable {α : Type*}
 
+/-- The diagonal set of `f`. -/
+def diagonal (f : α → Set α) : Set α := by
+  sorry
+
 end Cantor
