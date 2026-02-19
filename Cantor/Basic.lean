@@ -11,7 +11,6 @@ namespace Cantor
 variable {α : Type*}
 
 /-- The diagonal set of `f`. -/
-def diagonal (f : α → Set α) : Set α := by
-  sorry
+def diagonal (f : α → Set α) : Set α := {x | x ∉ f x}
 
 end Cantor
