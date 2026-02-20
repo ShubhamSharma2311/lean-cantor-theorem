@@ -13,4 +13,7 @@ variable {α : Type*}
 /-- The diagonal set of `f`. -/
 def diagonal (f : α → Set α) : Set α := {x | x ∉ f x}
 
+@[simp] lemma mem_diagonal (f : α → Set α) (x : α) : x ∈ diagonal f ↔ x ∉ f x := by
+  sorry
+
 end Cantor
