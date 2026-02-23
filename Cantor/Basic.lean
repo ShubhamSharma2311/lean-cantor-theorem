@@ -17,6 +17,9 @@ def diagonal (f : α → Set α) : Set α := {x | x ∉ f x}
 
 /-- The diagonal set is not a value of `f`. -/
 lemma diagonal_ne (f : α → Set α) (a : α) : f a ≠ diagonal f := by
-  sorry
+  intro ha
+  have h := mem_diagonal f a
+  rw [← ha] at h
+  exact iff_not_self h
 
 end Cantor
