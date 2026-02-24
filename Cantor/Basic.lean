@@ -22,4 +22,8 @@ lemma diagonal_ne (f : α → Set α) (a : α) : f a ≠ diagonal f := by
   rw [← ha] at h
   exact iff_not_self h
 
+/-- **Cantor's theorem.** No `f : α → Set α` is surjective. -/
+theorem not_surjective (f : α → Set α) : ¬ Function.Surjective f := by
+  sorry
+
 end Cantor
