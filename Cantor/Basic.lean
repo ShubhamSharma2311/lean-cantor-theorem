@@ -27,4 +27,8 @@ theorem not_surjective (f : α → Set α) : ¬ Function.Surjective f := fun hf 
   let ⟨a, ha⟩ := hf (diagonal f)
   diagonal_ne f a ha
 
+/-- Dually, no `g : Set α → α` is injective. -/
+theorem not_injective (g : Set α → α) : ¬ Function.Injective g := by
+  sorry
+
 end Cantor
