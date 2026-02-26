@@ -29,6 +29,8 @@ theorem not_surjective (f : α → Set α) : ¬ Function.Surjective f := fun hf 
 
 /-- Dually, no `g : Set α → α` is injective. -/
 theorem not_injective (g : Set α → α) : ¬ Function.Injective g := by
-  sorry
+  intro hg
+  haveI : Nonempty (Set α) := ⟨∅⟩
+  exact not_surjective (Function.invFun g) (Function.invFun_surjective hg)
 
 end Cantor
