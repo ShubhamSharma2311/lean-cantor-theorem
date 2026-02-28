@@ -35,6 +35,7 @@ theorem not_injective (g : Set α → α) : ¬ Function.Injective g := by
 
 /-- Cardinal form: `#α < #(Set α)`. -/
 theorem mk_lt_mk_set : Cardinal.mk α < Cardinal.mk (Set α) := by
-  sorry
+  rw [Cardinal.mk_set]
+  exact Cardinal.cantor _
 
 end Cantor
